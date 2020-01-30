@@ -13,6 +13,9 @@ Bruno Mars
 Kim Seung Ju
 450
 4950000
+Mariah Carey
+450
+2225000
 
 Process finished with exit code 0
 
