@@ -3,8 +3,6 @@
 
 ## Table of Contents (Optional)
 
-> If your `README` has a lot of info, section headers might be nice.
-
 - [Pre-setting](#pre-setting)
 - [GIt](#git)
 
