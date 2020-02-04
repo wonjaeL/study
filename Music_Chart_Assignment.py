@@ -71,27 +71,12 @@ for music in music_list:
     temp_count_dict_Like[singer] = count_like
 
 #마지막에 print 0,1,2,3,4 반복문으로 쓰려고 하는데 계속 에러나서 일단 알아보겠습니다.
-print(singer_list[0])
-print(temp_count_dict_Like[singer_list[0]])
-print(temp_count_dict_profit[singer_list[0]])
+#반복문 수정 완료
 
-print(singer_list[1])
-print(temp_count_dict_Like[singer_list[1]])
-print(temp_count_dict_profit[singer_list[1]])
-
-print(singer_list[2])
-print(temp_count_dict_Like[singer_list[2]])
-print(temp_count_dict_profit[singer_list[2]])
-
-print(singer_list[3])
-print(temp_count_dict_Like[singer_list[3]])
-print(temp_count_dict_profit[singer_list[3]])
-
-print(singer_list[4])
-print(temp_count_dict_Like[singer_list[4]])
-print(temp_count_dict_profit[singer_list[4]])
-
-
+for i in range(0, 4):
+  print(singer_list[i])
+  print(temp_count_dict_Like[singer_list[i]])
+  print(temp_count_dict_profit[singer_list[i]])
 
 
 
@@ -126,5 +111,4 @@ print(temp_count_dict_profit[singer_list[4]])
 
 ### 심화 - Like가 가장 많은 노래를 best_song 변수에 넣고 맨 마지막에 출력하시오
 
-best_song = ''
 
