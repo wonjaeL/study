@@ -73,7 +73,7 @@ for music in music_list:
 #마지막에 print 0,1,2,3,4 반복문으로 쓰려고 하는데 계속 에러나서 일단 알아보겠습니다.
 #반복문 수정 완료
 
-for i in range(0, 4):
+for i in range(0, 5):
   print(singer_list[i])
   print(temp_count_dict_Like[singer_list[i]])
   print(temp_count_dict_profit[singer_list[i]])
