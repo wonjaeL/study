@@ -24,12 +24,31 @@ music_list.append({key_list[0]: singer_list[4], key_list[1]: 'Hero', key_list[2]
 
 temp_dict={}
 
-### 통과기준 - music_list를 이용하여서 singer_list에 있는 5명의 가수를 순서대로
+### 통과기준1 - music_list를 이용하여서 singer_list에 있는 5명의 가수를 순서대로
 #              가수명, 좋아요 합계, 앨범수익(앨범 판매량 X 앨범가격) 출력하시오
 #   Example
 #            > IU             (가수명)
 #            > 215            (좋아요 합계)
 #            > 3530000        (앨범수익)
 ###
-### 심화 - Like가 가장 많은 노래를 best_song 변수에 넣고 맨 마지막에 출력하시오
+# 통과기준2 - Like가 가장 많은 노래를 best_song 변수에 넣고 맨 마지막에 출력하시오
 best_song = ''
+
+for music in music_list:
+    singer_name = music[key_list[0]]
+    if singer_name not in temp_dict:
+        temp_dict[singer_name] = {}
+
+    if key_list[2] not in temp_dict[singer_name]:
+        temp_dict[singer_name][key_list[2]] = 0
+    if 'money' not in temp_dict[singer_name]:
+        temp_dict[singer_name]['money'] = 0
+
+    temp_dict[singer_name][key_list[2]] = music[key_list[2]] + temp_dict[singer_name][key_list[2]]
+    temp_dict[singer_name]['money'] = music[key_list[3]] * music[key_list[4]] + temp_dict[singer_name]['money']
+
+
+for i in range(0,5):
+    print(singer_list[i])
+    print(temp_dict[singer_list[i]][key_list[2]])
+    print(temp_dict[singer_list[i]]['money'])
