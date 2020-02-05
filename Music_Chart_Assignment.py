@@ -24,7 +24,7 @@ music_list.append(
 music_list.append(
     {key_list[0]: singer_list[3], key_list[1]: 'I love Girls', key_list[2]: 450, key_list[3]: 450, key_list[4]: 11000})
 music_list.append(
-    {key_list[0]: singer_list[4], key_list[1]: 'All I want for Christmas is You', key_list[2]: 250, key_list[3]: 250,
+    {key_list[0]: singer_list[4], key_list[1]: 'All I want for Christmas is You', key_list[2]: 450, key_list[3]: 250,
      key_list[4]: 5000})
 music_list.append(
     {
@@ -54,10 +54,15 @@ for music in music_list:
         best_song['count'] = music['like']
         best_song['song'] = music['music_name']
 
-singer_length = 5
-for i in range(0, singer_length):
-    print(singer_list[i])
-    print(temp_count_dict_Like[singer_list[i]])
-    print(temp_count_dict_profit[singer_list[i]])
+    if best_song['count'] == music['like']:
+        if best_song['song'] > music['music_name']:
+            best_song['count'] = music['like']
+            best_song['song'] = music['music_name']
+
+# singer_length = 5
+# for i in range(0, singer_length):
+#     print(singer_list[i])
+#     print(temp_count_dict_Like[singer_list[i]])
+#     print(temp_count_dict_profit[singer_list[i]])
 
 print(best_song['song'])
