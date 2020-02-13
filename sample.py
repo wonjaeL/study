@@ -10,6 +10,7 @@ music_chart = [
 temp_count_dict = {}
 
 for music in music_chart:
+    print(1111)
     singer = music['singer']
     if singer not in temp_count_dict:
         temp_count_dict[singer] = 0
