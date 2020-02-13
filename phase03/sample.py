@@ -2,28 +2,30 @@ class Animal:
     def __init__(self, name, age, leg_count):
         pass
 
+
     ## 다리개수를 출력하는 함수구현
     def print_legs(self):
+
         pass
 
 
-class Dog:
+class Dog(Animal):
     ## 이름과 나이를 출력하는 함수 구현
     def name_age(self):
         pass
 
 
-class Cat:
+class Cat(Animal):
     ## 나이 곱하기 다리개수를 출력하는 함수 구현
     def age_leg(self):
         pass
 
 
-dog1 = Dog()
-dog2 = Dog()
-cat1 = Cat()
-cat2 = Cat()
-cat3 = Cat()
+dog1 = Dog("check",7,4)
+dog2 = Dog("nobless",4,5)
+cat1 = Cat("topclass",5,6)
+cat2 = Cat("munbock",5,4)
+cat3 = Cat("gf",3,5)
 
 animals = [dog1, dog2, cat1, cat2, cat3]
 
