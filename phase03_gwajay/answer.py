@@ -2,15 +2,17 @@ from phase03_gwajay.moonjae import get_moonjae  # Do not change this line
 
 
 class Music:
-    # name 이라는 attribute를 추가해주세요
-    # like라는 attribute를 추가해주세요
-    # album_price라는 attribute를 추가해주세요
-    pass
+
+    def __init__(self, name, like, album_price):
+        self.name = name
+        self.like = like
+        self.album_price = album_price
 
 
 class Singer:
-    # name 이라는 attribute를 추가해주세요
-    # music_list 라는 list 를 만들어서 가수가 부른 노래를 저장해주세요
+    def __init__(self, name, music_list):
+        self.name = name
+        self.music_list = music_list
 
     def get_song_list(self):
         return self.music_list
@@ -19,26 +21,19 @@ class Singer:
 
 
 def answer():
+    key_list, music_list = get_moonjae()
+
     singer_list = []
-    ##########
-    ## Example
-    ##########
-    ## instance = Music(xxxx,xxxx,xxx,xxx)
-    ## singer_list.append(instance)
+    singer_dict = {}
+    for music_dict in music_list:
+        singer_name = music_dict['singer_name']
+        if singer_name not in singer_dict:
+            singer_dict[singer_name] = Singer(music_dict['singer_name'], [])
+            singer_list.append(singer_dict[singer_name])
 
-    key_list, music_list = get_moonjae()  # Do not change this line
-    # ///////////////////////////////////////////////////////////////////////////////////
+        music = Music(music_dict['music_name'], music_dict['like'], music_dict['album_price'])
+        singer_dict[singer_name].music_list.append(music)
 
-    '''
-        이 부분에 여러분의 알고리즘 구현이 들어갑니다.
-        Music, Singer Class의 __init__함수를 구현하시고
-        30번줄 부터 42번줄 까지 지우고 구현하세요
-        key_list, music_list에 값이 담겨져 있습니다.
-        참고해서 singer class를 이용하여 instance를
-        모든 singer를 class_list에 담아주세요
-        (이번 문제에서는 상속이 없습니다.)
-    '''
-    # ///////////////////////////////////////////////////////////////////////////////////
     return singer_list
 
 

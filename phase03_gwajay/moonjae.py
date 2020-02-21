@@ -37,15 +37,18 @@ def calculate():
 
     for singer in singer_list:
         song_list = singer.get_song_list()
+        if not song_list:
+            print('Fail - song_list가 비어있습니다.')
+            exit(1)
         for song in song_list:
             if not hasattr(song, 'name'):
-                print('Fail - Name attribute가 없습니다.')
+                print('Fail - song Name attribute가 없습니다.')
                 exit(1)
             if not hasattr(song, 'like'):
-                print('Fail - Name attribute가 없습니다.')
+                print('Fail - like attribute가 없습니다.')
                 exit(1)
             if not hasattr(song, 'album_price'):
-                print('Fail - Name attribute가 없습니다.')
+                print('Fail - album_price attribute가 없습니다.')
                 exit(1)
 
     print('PASS - 수고하셨습니다.')
